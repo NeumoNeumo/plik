@@ -219,6 +219,7 @@ do
 
     FILE_MD5=$(echo $FILE_RESP | jsonValue fileMd5)
     FILE_NAME=$(echo $FILE_RESP | jsonValue fileName)
+    FILE_NAME=$(echo -en $FILE_NAME)
     FILE_STATUS=$(echo $FILE_RESP | jsonValue status)
     FILE_URL="$DOWNLOAD_DOMAIN/file/$UPLOAD_ID/$FILE_ID/$FILE_NAME"
 
